@@ -9,8 +9,11 @@
     <% 
         int hoursWorked = Integer.parseInt(request.getParameter("hoursWorked"));
         int hourlyPay = Integer.parseInt(request.getParameter("hourlyPay"));
+        int otHours = hoursWorked - 40;
+        double otPayRate = otHours * 1.5;
         
-    
+        
+        
     %>
     
     <body>
@@ -31,12 +34,12 @@
                 
                 <tr>
                     <td>&#35; Hours Overtime:</td>
-                    <td><%= %></td>
+                    <td><%= otHours %></td>
                 </tr>
                              
                 <tr>
                     <td>Overtime Hourly Rate:</td>
-                    <td><%= %></td>
+                    <td><%= otPayRate %></td>
                 </tr>
                 
                 <tr>
