@@ -7,14 +7,15 @@
     </head>
     
     <% 
-        String hoursWorked = request.getParameter("hoursWorked");
-        String hourlyPay = request.getParameter("hourlyPay");
+        int hoursWorked = Integer.parseInt(request.getParameter("hoursWorked"));
+        int hourlyPay = Integer.parseInt(request.getParameter("hourlyPay"));
         
     
     %>
     
     <body>
         <h1>Salary Information</h1>
+        <hr>
         
         <table border="2">
             <tbody>
@@ -28,7 +29,52 @@
                     <td><%= hourlyPay %></td>
                 </tr>
                 
+                <tr>
+                    <td>&#35; Hours Overtime:</td>
+                    <td><%= %></td>
+                </tr>
+                             
+                <tr>
+                    <td>Overtime Hourly Rate:</td>
+                    <td><%= %></td>
+                </tr>
+                
+                <tr>
+                    <td>Gross Pay:</td>
+                    <td><%= %></td>
+                </tr>
+                
+                <tr>
+                    <td>Pre-tax Deduct:</td>
+                    <td><%= %></td>
+                </tr>
+                
+                <tr>
+                    <td>Pre-tax Pay:</td>
+                    <td><%= %></td>
+                </tr>
+       
+                <tr>
+                    <td>Tax Amount:</td>
+                    <td><%= %></td>
+                </tr>
+                
+                <tr>
+                    <td>Post-tax Pay:</td>
+                    <td><%= %></td>
+                </tr>
+                
+                <tr>
+                    <td>Post-tax Deduct:</td>
+                    <td><%= %></td>
+                </tr>
+                
+                <tr>
+                    <td>Net Pay:</td>
+                    <td><%= %></td>
+                </tr>
             </tbody>
+            
             
         </table>
         
