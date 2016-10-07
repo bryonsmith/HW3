@@ -20,6 +20,16 @@
                         <td>Hourly Pay:</td>
                         <td><input type="text" name="hourlyPay" value="" size="40"></td>
                     </tr>
+                    
+                    <tr>
+                        <td>Pre-tax Deductions:</td>
+                        <td><input type="text" name="preTax" value="" size="40"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Post-tax Deductions:</td>
+                        <td><input type="text" name="postTax" value="" size="40"></td>
+                    </tr>
                                         
                     
                 </tbody>
