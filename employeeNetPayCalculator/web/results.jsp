@@ -8,6 +8,8 @@
     
     <% 
         String hoursWorked = request.getParameter("hoursWorked");
+        String hourlyPay = request.getParameter("hourlyPay");
+        
     
     %>
     
@@ -21,7 +23,10 @@
                     <td><%= hoursWorked %></td>
                 </tr>
                 
-                
+                <tr>
+                    <td>Hourly Rate:</td>
+                    <td><%= hourlyPay %></td>
+                </tr>
                 
             </tbody>
             

@@ -16,6 +16,10 @@
                         <td><input type="text" name="hoursWorked" value="" size="40"></td>
                     </tr>
                     
+                    <tr>
+                        <td>Hourly Pay:</td>
+                        <td><input type="text" name="hourlyPay" value="" size="40"></td>
+                    </tr>
                                         
                     
                 </tbody>
@@ -24,7 +28,10 @@
                 
             </table>
             
-                        
+            <br><br>
+            
+            <input type="reset" value="Clear" id="clear">
+            <input type="submit" value="Submit" id="submit">
             
         </form>
         
