@@ -10,9 +10,9 @@
     
     <% 
         double hoursWorked = Integer.parseInt(request.getParameter("hoursWorked"));
-        int hourlyPay = Integer.parseInt(request.getParameter("hourlyPay"));
-        int preTax = Integer.parseInt(request.getParameter("preTax"));
-        int postTax = Integer.parseInt(request.getParameter("postTax"));
+        double hourlyPay = Integer.parseInt(request.getParameter("hourlyPay"));
+        double preTax = Integer.parseInt(request.getParameter("preTax"));
+        double postTax = Integer.parseInt(request.getParameter("postTax"));
         double otHours = 0;
         double otPayRate = 0;
         double otPay = 0;
@@ -58,67 +58,66 @@
     <body>
         <h1>Salary Information</h1>
         <hr>
-        <table>
-            <tbody>
-                <tr>
-                    <td>Total Hours Worked:</td>
-                    <td><%= hoursWorked %></td>
-                </tr>
-                
-                <tr>
-                    <td>Hourly Rate:</td>
-                    <td><%= hourlyPay %></td>
-                </tr>
-                
-                <tr>
-                    <td>&#35; Hours Overtime:</td>
-                    <td><%= otHours %></td>
-                </tr>
-                             
-                <tr>
-                    <td>Overtime Hourly Rate:</td>
-                    <td><%= otPayRate %></td>
-                </tr>
-                
-                <tr>
-                    <td>Gross Pay:</td>
-                    <td><%= grossPay %></td>
-                </tr>
-                
-                <tr>
-                    <td>Pre-tax Deduct:</td>
-                    <td><%= preTax %></td>
-                </tr>
-                
-                <tr>
-                    <td>Pre-tax Pay:</td>
-                    <td><%= taxablePay %></td>
-                </tr>
-       
-                <tr>
-                    <td>Tax Amount:</td>
-                    <td><%= taxAmount %></td>
-                </tr>
-                
-                <tr>
-                    <td>Post-tax Pay:</td>
-                    <td><%= postTaxPay %></td>
-                </tr>
-                
-                <tr>
-                    <td>Post-tax Deduct:</td>
-                    <td><%= postTax %></td>
-                </tr>
-                
-                <tr>
-                    <td>Net Pay:</td>
-                    <td><%= netPay %></td>
-                </tr>
-                
-            </tbody>
-            
-            
-        </table>
-        
+            <table class="center">
+                <tbody>
+                    <tr>
+                        <td>Total Hours Worked:</td>
+                        <td><%= hoursWorked %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hourly Rate:</td>
+                        <td><%= hourlyPay %></td>
+                    </tr>
+
+                    <tr>
+                        <td>&#35; Hours Overtime:</td>
+                        <td><%= otHours %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Overtime Hourly Rate:</td>
+                        <td><%= otPayRate %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Gross Pay:</td>
+                        <td><%= grossPay %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pre-tax Deduct:</td>
+                        <td><%= preTax %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pre-tax Pay:</td>
+                        <td><%= taxablePay %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tax Amount:</td>
+                        <td><%= taxAmount %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Post-tax Pay:</td>
+                        <td><%= postTaxPay %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Post-tax Deduct:</td>
+                        <td><%= postTax %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Net Pay:</td>
+                        <td><%= netPay %></td>
+                    </tr>
+
+                </tbody>
+
+
+            </table>
     </body>
 </html>

@@ -11,36 +11,33 @@ h1 {
 	font-size: 20pt; 
 	}
 
-        td {
-            border: solid 1px;
-            background-color: grey;
-            font-align: center;
+td {
+    border: solid 1px;
+    background-color: #DCDCDC;
+    font-align: center;
             
-            
-        }
-        
-        input {
-            background-color: white;
-            font-size: 10pt;
-            
-        
-        }
-        
-        .outside {
-            align-items: center;
-            position : absolute;
-            display: table;
-            background: #ccc;
-        }
-        
-        .inside {
-            display: table-cell;
-    vertical-align: middle;
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.center {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 10px;
     text-align: center;
-        }
-        
-         .display: {inline-block;
-    background: #fff;
-    padding : 20px;
-    border : 1px solid #000;
-         }
+}
+
+input {
+    background-color: white;
+    font-size: 10pt;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
