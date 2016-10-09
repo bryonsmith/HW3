@@ -1,0 +1,46 @@
+
+
+
+body {
+	background: gold;
+	}
+
+h1 { 
+	text-align: center; 
+	font-weight: bold; 
+	font-size: 20pt; 
+	}
+
+        td {
+            border: solid 1px;
+            background-color: grey;
+            font-align: center;
+            
+            
+        }
+        
+        input {
+            background-color: white;
+            font-size: 10pt;
+            
+        
+        }
+        
+        .outside {
+            align-items: center;
+            position : absolute;
+            display: table;
+            background: #ccc;
+        }
+        
+        .inside {
+            display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+        }
+        
+         .display: {inline-block;
+    background: #fff;
+    padding : 20px;
+    border : 1px solid #000;
+         }

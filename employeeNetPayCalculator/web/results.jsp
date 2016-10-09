@@ -4,6 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Salary Information</title>
     </head>
     
@@ -24,7 +25,6 @@
         
         if (hoursWorked > 40)
         {
-            hoursWorked = 40;
             otHours = hoursWorked - 40;
             otPayRate = hourlyPay * 1.5;
             otPay = otHours * otPayRate;
@@ -58,8 +58,7 @@
     <body>
         <h1>Salary Information</h1>
         <hr>
-        
-        <table border="2">
+        <table>
             <tbody>
                 <tr>
                     <td>Total Hours Worked:</td>
