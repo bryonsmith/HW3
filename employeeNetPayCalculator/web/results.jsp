@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,39 +8,37 @@
     </head>
     
     <% 
-        int hoursWorked = Integer.parseInt(request.getParameter("hoursWorked"));
+        double hoursWorked = Integer.parseInt(request.getParameter("hoursWorked"));
         int hourlyPay = Integer.parseInt(request.getParameter("hourlyPay"));
         int preTax = Integer.parseInt(request.getParameter("preTax"));
         int postTax = Integer.parseInt(request.getParameter("postTax"));
-        int regularHours = 0;
-        int otHours = 0;
-        int payRate = 0;
+        double otHours = 0;
         double otPayRate = 0;
         double otPay = 0;
-        int regularPay = 0;
         double grossPay = 0;
         double taxAmount = 0;
         double taxablePay = 0;
         double postTaxPay = 0;
         double netPay = 0;
-        double postTaxDeduct = 0;
-        
+               
         
         if (hoursWorked > 40)
         {
-            regularHours = 40;
+            hoursWorked = 40;
             otHours = hoursWorked - 40;
-            otPayRate = payRate * 1.5;
+            otPayRate = hourlyPay * 1.5;
             otPay = otHours * otPayRate;
-            regularPay = regularHours * payRate;
-            grossPay = regularPay + otPay;
-        }
-        else
-        {
-            grossPay = hoursWorked * payRate;
+            taxablePay = hoursWorked * hourlyPay;
+            grossPay = taxablePay + otPay;
         }
         
-        grossPay = hoursWorked * payRate;
+        else
+        {
+            grossPay = hoursWorked * hourlyPay;
+        }
+        
+        taxablePay = grossPay - preTax;
+        
         
         if (grossPay < 500)
         {
@@ -52,7 +51,7 @@
         
         postTaxPay = taxablePay - taxAmount;
         
-        netPay = postTaxPay - postTaxDeduct;
+        netPay = postTaxPay - postTax;
         
     %>
     
@@ -109,7 +108,7 @@
                 
                 <tr>
                     <td>Post-tax Deduct:</td>
-                    <td><%= postTaxDeduct %></td>
+                    <td><%= postTax %></td>
                 </tr>
                 
                 <tr>
