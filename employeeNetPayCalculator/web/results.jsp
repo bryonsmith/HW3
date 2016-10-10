@@ -58,7 +58,7 @@
     <body>
         <h1>Salary Information</h1>
         <hr>
-            <table class="center">
+            <table class="center" border="1">
                 <tbody>
                     <tr>
                         <td>Total Hours Worked:</td>
